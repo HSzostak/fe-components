@@ -4,7 +4,7 @@
   "description": "A useful colection of front end components.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/HSzostak/fe-components/issues"
   },
-  "homepage": "https://github.com/HSzostak/fe-components#readme"
+  "homepage": "https://github.com/HSzostak/fe-components#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.8.1"
+  }
 }

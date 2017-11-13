@@ -1,0 +1,10 @@
+{
+  "esversion"     : 6,
+  "eqeqeq"        : true,
+  "freeze"        : true,
+  "newcap"        : true,
+  "noempty"       : true,
+  "nomen"         : true,
+  "trailing"      : true,
+  "indent"        : 2
+}

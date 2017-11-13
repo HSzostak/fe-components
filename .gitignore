@@ -1,2 +1,7 @@
-node_modules
-dist
+# Files
+npm-debug.log
+
+# Folders
+dist/
+node_modules/
+
