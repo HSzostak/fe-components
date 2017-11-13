@@ -1,0 +1,47 @@
+$fonturl: '../fonts/';
+
+// Breakpoints
+// Call using: @include media(l) {}
+$breakpoints: (
+  xxs: 15em, //240px
+  xs: 20em, //320px
+  s: 30em, //480px
+  m: 37.5em, //600px
+  l: 48em, //768px
+  xl: 64em, //1024px
+  xxl: 75em, //1200px
+  xxxl: 100em, //1600px
+  landscape: 'only screen and (orientation:landscape) and (max-width: 48em)',
+  landscapeSmall: 'only screen and (orientation:landscape) and (max-width: 37.5em)',
+  portrait: 'only screen and (orientation:portrait)'
+)!default;
+
+// Colors variables
+// Call using: colour('primary');
+$colors: (
+'white': '#ffffff',
+'red': '#ff0000',
+'primary': '#000000',
+'grey': '#EEEEEE'
+);
+
+// Font stacks
+// Call using: font-stack('body');
+$font-stacks: (
+  'body': 'inherit'
+);
+
+// Grid variables
+$grid-gutter-width:   20px;
+$grid-columns:        12;
+
+$container-s:         280px;
+$container-m:         700px;
+$container-l:         760px;
+$container-xl:        1060px;
+
+$column-size-s:       5px;
+$column-size-m:       30px;
+$column-size-l:       39px;
+$column-size-xl:      54px;
+

@@ -1,0 +1,12 @@
+// @param {string} $color
+// @returns {string} Returns the selected color from the $color variable
+//
+@function color($key) {
+	@return _color(#{unquote(map-get($colors,$key))});
+}
+
+// Call using font-stack(fontName);
+// fontName defined in font mixin
+@function font-stack($key) {
+	@return #{unquote(map-get($font-stacks,$key))};
+}

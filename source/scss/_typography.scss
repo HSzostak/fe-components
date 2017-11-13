@@ -1,0 +1,32 @@
+// @include font('FONTNAME', fontname);
+
+body {
+	font-family: font-stack('body');
+	font-size: 100%;
+	font-weight: 500;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+	font-family: font-stack('body');
+	font-weight: 800;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+	margin: 0;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+button,
+input,
+textarea,
+select {
+	font-weight: normal;
+	font-size: 100%;
+} // button, input, textarea, select

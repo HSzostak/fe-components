@@ -1,0 +1,20 @@
+$old-ie: false !default;
+$media-extend: true !default;
+
+@mixin clearfix(
+		$extend: true
+	) {
+	@if $extend and $media-extend {
+		@extend %clearfix;
+	}
+	@else {
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			@if $old-ie {
+				*zoom: 1;
+			}
+		}
+	}
+}

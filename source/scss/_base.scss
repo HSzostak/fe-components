@@ -1,0 +1,62 @@
+html {
+	height: 100%;
+} // html
+
+body {
+	background: color('white');
+	line-height: 1.5rem;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin: 0;
+	height: 100%;
+} // body
+
+button {
+	cursor: pointer;
+} // button
+
+a:hover.no-outline,
+button:hover.no-outline,
+a:focus.no-outline,
+button:focus.no-outline {
+	border-color: transparent;
+} // a:hover.no-outline, button:hover.no-outline, a:focus.no-outline, button:focus.no-outline
+
+.accessible {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+
+	&.focusable {
+		&:focus {
+			position: static;
+			width: auto;
+			height: auto;
+		} // &:focus
+	} // &.focusable
+} // .accessible
+
+.hidden,
+.is-hidden {
+	display: none;
+} // .hidden, .is-hidden
+
+.clearfix {
+	@include clearfix($extend: false);
+} // .clearfix
+
+// Horizontal row
+hr {
+	box-sizing: content-box;
+	height: 0;
+	margin: 30px 0;
+	border: 0;
+	border-top: 1px solid #E5E5E5;
+} // hr
+
+.nowrap {
+	white-space: nowrap;
+} // .nowrap
