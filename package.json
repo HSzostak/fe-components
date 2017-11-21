@@ -4,7 +4,7 @@
   "description": "A useful colection of front end components.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack",
     "start": "webpack-dev-server --open"
   },
   "repository": {
@@ -28,7 +28,7 @@
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.6.1",
-    "nunjucks-html-loader": "^1.1.0",
+    "nunjucks-isomorphic-loader": "^2.0.2",
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"

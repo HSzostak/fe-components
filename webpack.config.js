@@ -17,7 +17,7 @@ function generateHtmlPlugins (templateDir) {
     // Create new HtmlWebpackPlugin with options
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
-      template: 'nunjucks-html-loader!' + path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
     });
   });
 }
@@ -43,11 +43,11 @@ module.exports = {
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       },
       {
-        test: /\.html$|njk|nunjucks/,
-        use: ['html-loader',{
-          loader: 'nunjucks-html-loader',
-          options : {
-            searchPaths: ['./source/templates/', './source/templates/views', './source/templates/components']
+        test: /\.njk$/,
+        use: [{
+          loader: 'nunjucks-isomorphic-loader',
+          query: {
+            root: [path.resolve(__dirname, 'source/templates')]
           }
         }]
       }
@@ -56,8 +56,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin({ // define where to save the file
-      filename:  (getPath) => {
-        return getPath('css/styles.bundle.css').replace('css', 'css');
+      filename: (getPath) => {
+        return getPath('css/styles.bundle.css');
       },
       allChunks: true
     })

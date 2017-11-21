@@ -1,8 +1,8 @@
 <!-- index.nunjucks -->
-{% extends "layout.njk" %}
+{% extends "partials/_layout.njk" %}
 
 {% block content %}
   <h1> Here comes my content that is injected to layout.njk!</h1>
   <p>testing</p>
-  {% include "../components/test-component.njk" %}
+  {% include "components/test-component.njk" %}
 {% endblock %}
